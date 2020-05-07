@@ -33,11 +33,11 @@ class Game:
 
     def __init_game(self):
         self.player = pygame.image.load('neko.png').convert_alpha()
-        self.map_bottom = pygame.image.load('img/map/0.png').convert_alpha()
-        self.map_top = pygame.image.load('img/map/0_top.png').convert_alpha()
+        self.map_bottom = pygame.image.load('0.png').convert_alpha()
+        self.map_top = pygame.image.load('0_top.png').convert_alpha()
         self.game_map = GameMap(self.map_bottom, self.map_top, 0, 0)
 
-        self.game_map.load_walk_file('img/map/0.map')
+        self.game_map.load_walk_file('0.map')
         self.role = CharWalk(self.player, 14, CharWalk.DIR_DOWN, 80, 60)
 
     def update(self):
